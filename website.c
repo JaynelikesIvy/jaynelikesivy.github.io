@@ -166,7 +166,7 @@ void DrawMediaIUse(ui16 w, ui16 h)
 
   DrawText("Stuff I do.", w/1.5, 250, 25, LIGHTGRAY);
 
-  if(GuiButton((Rectangle){w/1.5, 300, 200, 50}, "Youtube.")) OpenURL("https://youtube.com/jaynelikesivy");
+  if(GuiButton((Rectangle){w/1.5, 300, 200, 50}, "Youtube.")) OpenURL("https://youtube.com/@JaynelikesIvy");
 
   if(GuiButton((Rectangle){w/1.5, 350, 200, 50}, "Github.")) OpenURL("https://github.com/jaynelikesivy");
 

@@ -1,0 +1,8 @@
+I found out how to host this little crappy site with github :D
+It should be accessible with jaynelikesivy.github.io
+Gonna link this in my bios now, super happy :D
+
+Only issue is I need to recompile the website everytime I wanna 
+add a new blog, due to how it compiles for html :(
+But thats the price I pay to use C to make this, probably
+not the smartest idea but still, works for me.

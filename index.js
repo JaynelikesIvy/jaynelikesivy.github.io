@@ -72,7 +72,7 @@ var ENVIRONMENT_IS_SHELL = !ENVIRONMENT_IS_WEB && !ENVIRONMENT_IS_NODE && !ENVIR
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// include: C:\Users\marku\AppData\Local\Temp\tmpp8q5c4sv.js
+// include: C:\Users\marku\AppData\Local\Temp\tmp4mcvdpnk.js
 if (!Module["expectedDataFileDownloads"]) Module["expectedDataFileDownloads"] = 0;
 
 Module["expectedDataFileDownloads"]++;
@@ -91,8 +91,8 @@ Module["expectedDataFileDownloads"]++;
       // web worker
       PACKAGE_PATH = encodeURIComponent(location.pathname.substring(0, location.pathname.lastIndexOf("/")) + "/");
     }
-    var PACKAGE_NAME = "website.data";
-    var REMOTE_PACKAGE_BASE = "website.data";
+    var PACKAGE_NAME = "index.data";
+    var REMOTE_PACKAGE_BASE = "index.data";
     var REMOTE_PACKAGE_NAME = Module["locateFile"] ? Module["locateFile"](REMOTE_PACKAGE_BASE, "") : REMOTE_PACKAGE_BASE;
     var REMOTE_PACKAGE_SIZE = metadata["remote_package_size"];
     async function fetchRemotePackage(packageName, packageSize) {
@@ -167,9 +167,9 @@ Module["expectedDataFileDownloads"]++;
           // canOwn this data in the filesystem, it is a slice into the heap that will never change
           Module["FS_createDataFile"](name, null, data, true, true, true);
         }
-        Module["removeRunDependency"]("datafile_website.data");
+        Module["removeRunDependency"]("datafile_index.data");
       }
-      Module["addRunDependency"]("datafile_website.data");
+      Module["addRunDependency"]("datafile_index.data");
       if (!Module["preloadResults"]) Module["preloadResults"] = {};
       Module["preloadResults"][PACKAGE_NAME] = {
         fromCache: false
@@ -229,23 +229,23 @@ Module["expectedDataFileDownloads"]++;
   });
 }))();
 
-// end include: C:\Users\marku\AppData\Local\Temp\tmpp8q5c4sv.js
-// include: C:\Users\marku\AppData\Local\Temp\tmpowrz3mbs.js
+// end include: C:\Users\marku\AppData\Local\Temp\tmp4mcvdpnk.js
+// include: C:\Users\marku\AppData\Local\Temp\tmp2_xb_h_h.js
 // All the pre-js content up to here must remain later on, we need to run
 // it.
 if ((typeof ENVIRONMENT_IS_WASM_WORKER !== "undefined" && ENVIRONMENT_IS_WASM_WORKER) || (typeof ENVIRONMENT_IS_PTHREAD !== "undefined" && ENVIRONMENT_IS_PTHREAD) || (typeof ENVIRONMENT_IS_AUDIO_WORKLET !== "undefined" && ENVIRONMENT_IS_AUDIO_WORKLET)) Module["preRun"] = [];
 
 var necessaryPreJSTasks = Module["preRun"].slice();
 
-// end include: C:\Users\marku\AppData\Local\Temp\tmpowrz3mbs.js
-// include: C:\Users\marku\AppData\Local\Temp\tmp6vwyv569.js
+// end include: C:\Users\marku\AppData\Local\Temp\tmp2_xb_h_h.js
+// include: C:\Users\marku\AppData\Local\Temp\tmp65dz35qd.js
 if (!Module["preRun"]) throw "Module.preRun should exist because file support used it; did a pre-js delete it?";
 
 necessaryPreJSTasks.forEach(task => {
   if (Module["preRun"].indexOf(task) < 0) throw "All preRun tasks that exist before user pre-js code should remain after; did you replace Module or modify Module.preRun?";
 });
 
-// end include: C:\Users\marku\AppData\Local\Temp\tmp6vwyv569.js
+// end include: C:\Users\marku\AppData\Local\Temp\tmp65dz35qd.js
 var programArgs = [];
 
 var thisProgram = "./this.program";
@@ -703,7 +703,7 @@ function createExportWrapper(name, func, nargs) {
 var wasmBinaryFile;
 
 function findWasmBinary() {
-  return locateFile("website.wasm");
+  return locateFile("index.wasm");
 }
 
 function getBinarySync(file) {
